@@ -120,7 +120,14 @@ class LinkedList {
     }
 
     indexOf(data) {
-
+        let currentHead = this._head;
+        for (let i = 0; i<this.length; i++){
+            if (currentHead.data == data) {
+                return i;
+            }
+        currentHead = currentHead.next;
+        }
+        return -1;
     }
 }
 
